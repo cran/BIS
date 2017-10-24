@@ -1,0 +1,24 @@
+Package: BIS
+Type: Package
+Title: Programmatic Access to Bank for International Settlements Data
+Version: 0.1.0
+Authors@R: person("Eric", "Persson", email = "expersso5@gmail.com",
+    role = c("aut", "cre"))
+Description: Provides an interface to data provided by the Bank for International 
+  Settlements <https://www.bis.org>, allowing for programmatic retrieval of a 
+  large quantity of (central) banking data.
+License: CC0
+Encoding: UTF-8
+LazyData: true
+URL: https://www.bis.org
+BugReports: https://github.com/expersso/BIS/issues
+Suggests: knitr, rmarkdown, ggplot2, zoo
+Imports: dplyr, readr, tidyr, rvest, xml2
+VignetteBuilder: knitr
+RoxygenNote: 6.0.1
+NeedsCompilation: no
+Packaged: 2017-10-24 15:26:31 UTC; persson
+Author: Eric Persson [aut, cre]
+Maintainer: Eric Persson <expersso5@gmail.com>
+Repository: CRAN
+Date/Publication: 2017-10-24 15:31:02 UTC
