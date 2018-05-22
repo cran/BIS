@@ -19,7 +19,7 @@ datasets <- get_datasets()
 head(datasets, 20)
 
 ## ----rates---------------------------------------------------------------
-rates <- get_bis(datasets$url[16], quiet = TRUE)
+rates <- get_bis(datasets$url[datasets$name == "Policy rates (monthly)"], quiet = TRUE)
 head(rates)
 
 ## ----plot----------------------------------------------------------------

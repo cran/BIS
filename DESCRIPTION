@@ -1,7 +1,7 @@
 Package: BIS
 Type: Package
 Title: Programmatic Access to Bank for International Settlements Data
-Version: 0.2.0
+Version: 0.2.1
 Authors@R: person("Eric", "Persson", email = "expersso5@gmail.com",
     role = c("aut", "cre"))
 Description: Provides an interface to data provided by the Bank for International 
@@ -17,8 +17,8 @@ Imports: dplyr, readr, tidyr, rvest, xml2
 VignetteBuilder: knitr
 RoxygenNote: 6.0.1
 NeedsCompilation: no
-Packaged: 2018-04-09 08:27:32 UTC; persson
+Packaged: 2018-05-22 09:00:49 UTC; persson
 Author: Eric Persson [aut, cre]
 Maintainer: Eric Persson <expersso5@gmail.com>
 Repository: CRAN
-Date/Publication: 2018-04-09 08:34:56 UTC
+Date/Publication: 2018-05-22 10:32:13 UTC

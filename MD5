@@ -1,11 +1,11 @@
-d2560f83e64b535f6bb217d05a0f82c2 *DESCRIPTION
+c6d47278903275acc7c03fe4c3629d08 *DESCRIPTION
 8619a7444319a16e1788a223d21b6bbd *NAMESPACE
 d137c8e05bd338f67559a96496e59ed5 *R/main.R
 6a6ea31c3b5366dfe9bd0b3618630c6a *build/vignette.rds
-470193c63e85a83812eebfa9460b989c *inst/doc/BIS.R
-c2208ccfef7367a967726f5391aae014 *inst/doc/BIS.Rmd
-b8991086b8a9e91420f48c7fc85db52e *inst/doc/BIS.html
+affc915ffc3c5c009c587163ae0286a5 *inst/doc/BIS.R
+a4fa79a5b927c94dccc0d5870adbfef8 *inst/doc/BIS.Rmd
+e1e191caa9c8a0250b8e97084388fae9 *inst/doc/BIS.html
 e5603bdfccf73af0cd45b7f18cd26edf *man/get_bis.Rd
 743648abf7ecde93ca4dc209d3884635 *man/get_datasets.Rd
-c2208ccfef7367a967726f5391aae014 *vignettes/BIS.Rmd
+a4fa79a5b927c94dccc0d5870adbfef8 *vignettes/BIS.Rmd
 262e723360329df03be595547afd047d *vignettes/README-plot-1.png
