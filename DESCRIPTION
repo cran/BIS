@@ -1,24 +1,27 @@
 Package: BIS
 Type: Package
 Title: Programmatic Access to Bank for International Settlements Data
-Version: 0.2.1
-Authors@R: person("Eric", "Persson", email = "expersso5@gmail.com",
-    role = c("aut", "cre"))
-Description: Provides an interface to data provided by the Bank for International 
-  Settlements <https://www.bis.org>, allowing for programmatic retrieval of a 
-  large quantity of (central) banking data.
+Version: 0.3.1
+Authors@R: c(
+  person("Eric", "Persson", role = c("aut")),
+  person("Stefan", "Angrick", email = "contact@stefanangrick.net",
+    role = c("cre"))
+  )
+Description: Provides an interface to data provided by the Bank for
+  International Settlements <https://www.bis.org>, allowing for programmatic
+  retrieval of a large quantity of (central) banking data.
 License: CC0
-Encoding: UTF-8
-LazyData: true
 URL: https://www.bis.org
-BugReports: https://github.com/expersso/BIS/issues
+BugReports: https://github.com/stefanangrick/BIS/issues
 Suggests: knitr, rmarkdown, ggplot2, zoo
-Imports: dplyr, readr, tidyr, rvest, xml2
+Imports: dplyr, readr, tidyr, tidyselect, rvest, xml2
 VignetteBuilder: knitr
-RoxygenNote: 6.0.1
+Encoding: UTF-8
+RoxygenNote: 7.2.2
 NeedsCompilation: no
-Packaged: 2018-05-22 09:00:49 UTC; persson
-Author: Eric Persson [aut, cre]
-Maintainer: Eric Persson <expersso5@gmail.com>
+Packaged: 2022-11-20 06:11:49 UTC; qwerty
+Author: Eric Persson [aut],
+  Stefan Angrick [cre]
+Maintainer: Stefan Angrick <contact@stefanangrick.net>
 Repository: CRAN
-Date/Publication: 2018-05-22 10:32:13 UTC
+Date/Publication: 2022-11-21 10:20:02 UTC

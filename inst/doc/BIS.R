@@ -1,44 +1,35 @@
-## ----setup, echo = FALSE-------------------------------------------------
-knitr::opts_chunk$set(
-  message = FALSE,
-  warning = FALSE,
-  collapse = TRUE,
-  fig.width = 6, 
-  fig.height = 4
-)
-
-## ----install, eval=FALSE-------------------------------------------------
+## ----install, eval=FALSE, message=FALSE, warning=FALSE------------------------
 #  library(devtools)
-#  install_github("expersso/BIS") # Github
-#  install.packages("BIS")        # CRAN
+#  install_github("stefanangrick/BIS")  # GitHub
 
-## ----datasets------------------------------------------------------------
-library(BIS)
+## ----loading, message=FALSE, warning=FALSE------------------------------------
+library("BIS")
 
-datasets <- get_datasets()
-head(datasets, 20)
+## ----datasets, message=FALSE, warning=FALSE-----------------------------------
+ds <- get_datasets()
+head(ds, 20)
 
-## ----rates---------------------------------------------------------------
-rates <- get_bis(datasets$url[datasets$name == "Policy rates (monthly)"], quiet = TRUE)
+## ----rates, message=FALSE, warning=FALSE--------------------------------------
+rates <- get_bis(ds$url[ds$id == "full_cbpol_m_csv"])
 head(rates)
 
-## ----plot----------------------------------------------------------------
-library(dplyr)
-library(ggplot2)
-library(zoo)
+## ----plot, message=FALSE, warning=FALSE---------------------------------------
+library("dplyr")
+library("ggplot2")
+library("zoo")
 
-rates_plot <- rates %>%
-  mutate(date = as.Date(as.yearmon(date))) %>%
-  filter(grepl("^(XM|US|CH|JP|GB|CA)", ref_area))
+rates_plot <- subset(rates, ref_area %in% c("US", "XM", "JP", "GB", "CH", "CA"))
+rates_plot <- mutate(rates_plot, date = as.Date(as.yearmon(date, format = "%Y-%m")))
 
 ggplot(rates_plot, aes(date, obs_value, color = reference_area)) +
-  geom_hline(yintercept = 0, linetype = "dashed",
-             color = "grey70", size = 0.02) +
   geom_line(show.legend = FALSE) +
   facet_wrap(~reference_area) +
-  theme_light() +
-  theme(panel.grid = element_blank()) +
-  labs(x = NULL, y = NULL,
-       title = "Central bank policy rates",
-       subtitle = "% per annum")
+  labs(title = "Central bank policy rates",
+       subtitle = "% per annum", x = NULL, y = NULL)
+
+## ----nopivot, eval=FALSE, message=FALSE, warning=FALSE------------------------
+#  options(timeout = 600)
+#  lbs <- get_bis(ds$url[(ds$id == "full_lbs_d_pub_csv")], auto_pivot = FALSE)
+#  lbs <- subset(lbs, l_parent_cty %in% c("US", "DE", "JP"))
+#  lbs <- pivot_longer_bis(lbs)
 
